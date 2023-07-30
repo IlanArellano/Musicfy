@@ -10,8 +10,9 @@
     "tauri": "tauri"
   },
   "dependencies": {
-    "@ihaz/react-ui-utils": "^1.1.0-beta",
+    "@ihaz/react-ui-utils": "^1.1.2-beta",
     "@tauri-apps/api": "^1.4.0",
+    "primereact": "^9.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.14.2"
