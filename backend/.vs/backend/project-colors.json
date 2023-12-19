@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "8f49d810-58b6-426f-85ab-9c3a7e25b212": {
+      "ProjectGuid": "8f49d810-58b6-426f-85ab-9c3a7e25b212",
+      "DisplayName": "backend",
+      "ColorIndex": 0
+    },
+    "61563927-ce0d-496d-becd-7fbbc8674566": {
+      "ProjectGuid": "61563927-ce0d-496d-becd-7fbbc8674566",
+      "DisplayName": "ADO",
+      "ColorIndex": 1
+    },
+    "b09a7b8a-3868-4273-8268-a3d73c7d686f": {
+      "ProjectGuid": "b09a7b8a-3868-4273-8268-a3d73c7d686f",
+      "DisplayName": "Entities",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}
