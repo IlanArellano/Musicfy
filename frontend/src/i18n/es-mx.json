@@ -1,0 +1,11 @@
+{
+  "pages": {
+    "home": {
+      "slider": {
+        "home": "Inicio",
+        "search": "Buscar",
+        "library": "Tu biblioteca"
+      }
+    }
+  }
+}
