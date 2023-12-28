@@ -1,5 +1,5 @@
 import CommonObject from "@app/common/object";
-import { I18N_OBJ, SERVER_LANGUAGE } from "@app/server/enviroment";
+import ServerEnviroment from "@app/server/enviroment";
 import { getServerLanguage, rejectClient } from "@app/server/utils";
 
 const I18N_DICTIONARY = {
@@ -9,21 +9,24 @@ const I18N_DICTIONARY = {
 
 export const initUserLanguage = async (): Promise<void> => {
   rejectClient();
-  if (SERVER_LANGUAGE.get() && I18N_OBJ.get()) return;
+  const serverLang = ServerEnviroment.getServerLanguage();
+  const i18nObj = ServerEnviroment.getI18nObj();
+  if (serverLang.get() && i18nObj.get()) return;
   let lang = getServerLanguage();
   if (!lang) throw new Error("There's something wrong about language config");
   if (lang.includes(".")) lang = lang.split(".")[0];
   lang = lang.toLowerCase();
 
-  SERVER_LANGUAGE.set(lang);
+  serverLang.set(lang);
 
   const getJson = I18N_DICTIONARY[lang as keyof typeof I18N_DICTIONARY];
-  if (!getJson) I18N_OBJ.set(await I18N_DICTIONARY.en_us());
-  else I18N_OBJ.set(await getJson());
+  if (!getJson) i18nObj.set(await I18N_DICTIONARY.en_us());
+  else i18nObj.set(await getJson());
 };
 
 export const t = (path: string, type: string = "pages"): string | undefined => {
   rejectClient();
-  const dictionary = I18N_OBJ.get()!;
+  const i18nObj = ServerEnviroment.getI18nObj();
+  const dictionary = i18nObj.get()!;
   return CommonObject.getValueByRoute(dictionary, `${type}.${path}`);
 };

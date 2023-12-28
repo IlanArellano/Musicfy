@@ -36,7 +36,7 @@ function Home() {
 
   return (
     <div>
-      Holaa <Button onClick={onShowExample}>Abrir</Button>
+      <span>Holaa</span> <Button onClick={onShowExample}>Abrir</Button>
     </div>
   );
 }
