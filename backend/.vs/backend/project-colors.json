@@ -15,7 +15,17 @@
       "ProjectGuid": "b09a7b8a-3868-4273-8268-a3d73c7d686f",
       "DisplayName": "Entities",
       "ColorIndex": 2
+    },
+    "16fd58b2-ea53-43c9-bcff-bf8ecda482c7": {
+      "ProjectGuid": "16fd58b2-ea53-43c9-bcff-bf8ecda482c7",
+      "DisplayName": "Logic",
+      "ColorIndex": 3
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Archivos varios",
+      "ColorIndex": -1
     }
   },
-  "NextColorIndex": 3
+  "NextColorIndex": 4
 }

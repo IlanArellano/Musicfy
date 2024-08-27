@@ -12,6 +12,17 @@ namespace backend.Controllers
         {
             _logger = logger;
         }
+        // GET: ExampleController
+        public ActionResult Index()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public string Get()
+        {
+            return "example";
+        }
 
     }
 }
